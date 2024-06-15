@@ -16,3 +16,12 @@ toei_station = station.loc[
 ]
 toei_station = toei_station[cols]
 toei_station.to_csv("toei_station.csv", index=False, encoding="utf-8")
+
+metro_line = line.loc[(line["company_cd"] == 18)]
+cols = ["line_cd", "line_name", "line_color_c"]
+metro_line = metro_line[cols]
+metro_line.to_csv("metro_line.csv", index=False, encoding="utf-8")
+
+toei_line = line.loc[(line["company_cd"] == 119)]
+toei_line = toei_line[cols]
+toei_line.to_csv("toei_line.csv", index=False, encoding="utf-8")
